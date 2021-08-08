@@ -16,14 +16,69 @@ function generatePassword() {
     
         var charset = "",
         retVal = "";
-        var charprompt1 = window.prompt("Do you want to include lowercase characters?")
-        var charprompt2 = window.prompt("Do you want to include uppercase characters?")
-        var charprompt3 = window.prompt("Do you want to include special characters?")
-        var charprompt4 = window.prompt("Do you want to include numbers?")
+        //Select password optons prompts
+        var charprompt1 = window.prompt("Do you want to include lowercase characters? Type yes or no")
+
+        if (charprompt1.toString().toLowerCase() == "yes") {
+            charset += "abcdefghijklmnopqrstuvwxyz"
+        }
+        else if (charprompt1.toString().toLowerCase() == "no") {
+            charset += ""
+        }
     
-    if (charprompt1.toString().toLowerCase() == "yes") {
-        charset += "abcdefghijklmnopqrstuvwxyz"
-    }
+        else {
+            alert("Invalid selection. Please enter either yes or no.")
+            
+            generatePassword()
+        }
+
+        var charprompt2 = window.prompt("Do you want to include uppercase characters? Type yes or no")
+        
+        if (charprompt2.toString().toLowerCase() == "yes") {
+            charset += "abcdefghijklmnopqrstuvwxyz"
+        }
+        else if (charprompt2.toString().toLowerCase() == "no") {
+            charset += ""
+        }
+    
+        else {
+            alert("Invalid selection. Please enter either yes or no.")
+            
+            generatePassword()
+        }
+
+        var charprompt3 = window.prompt("Do you want to include special characters? Type yes or no")
+
+        if (charprompt3.toString().toLowerCase() == "yes") {
+            charset += "abcdefghijklmnopqrstuvwxyz"
+        }
+        else if (charprompt3.toString().toLowerCase() == "no") {
+            charset += ""
+        }
+    
+        else {
+            alert("Invalid selection. Please enter either yes or no.")
+            
+            generatePassword()
+        }
+
+        var charprompt4 = window.prompt("Do you want to include numbers? Type yes or no")
+    
+        if (charprompt4.toString().toLowerCase() == "yes") {
+            charset += "abcdefghijklmnopqrstuvwxyz"
+        }
+        else if (charprompt4.toString().toLowerCase() == "no") {
+            charset += ""
+        }
+    
+        else {
+            alert("Invalid selection. Please enter either yes or no.")
+            
+            generatePassword()
+        }
+    
+
+    
 
     if (charprompt2.toString().toLowerCase() == "yes") {
         charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
