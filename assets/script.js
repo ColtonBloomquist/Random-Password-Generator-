@@ -25,12 +25,14 @@ function generatePassword() {
         else if (charprompt1.toString().toLowerCase() == "no") {
             charset += ""
         }
-    
+        
         else {
-            alert("Invalid selection. Please enter either yes or no.")
+            alert("Invalid selection. Please try again and enter either yes or no.")
+            return 
             
-            generatePassword();
+            
         }
+        
 
         var charprompt2 = window.prompt("Do you want to include uppercase characters? Type yes or no")
         
@@ -42,9 +44,9 @@ function generatePassword() {
         }
     
         else {
-            alert("Invalid selection. Please enter either yes or no.")
+            alert("Invalid selection. Please try again and enter either yes or no.")
+            return 
             
-            generatePassword()
         }
         
 
@@ -58,11 +60,11 @@ function generatePassword() {
         }
     
         else {
-            alert("Invalid selection. Please enter either yes or no.")
+            alert("Invalid selection. Please try again and enter either yes or no.")
+            return 
             
-            generatePassword();
         }
-
+        
         var charprompt4 = window.prompt("Do you want to include numbers? Type yes or no")
     
         if (charprompt4.toString().toLowerCase() == "yes") {
@@ -73,9 +75,9 @@ function generatePassword() {
         }
     
         else {
-            alert("Invalid selection. Please enter either yes or no.")
+            alert("Invalid selection. Please try again and enter either yes or no.")
+            return 
             
-            generatePassword()
         }
     
     
@@ -94,6 +96,7 @@ function generatePassword() {
     return retVal;
 
 }
+
 
 
 
