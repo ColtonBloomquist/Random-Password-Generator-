@@ -29,13 +29,13 @@ function generatePassword() {
         else {
             alert("Invalid selection. Please enter either yes or no.")
             
-            generatePassword()
+            generatePassword();
         }
 
         var charprompt2 = window.prompt("Do you want to include uppercase characters? Type yes or no")
         
         if (charprompt2.toString().toLowerCase() == "yes") {
-            charset += "abcdefghijklmnopqrstuvwxyz"
+            charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         }
         else if (charprompt2.toString().toLowerCase() == "no") {
             charset += ""
@@ -46,11 +46,12 @@ function generatePassword() {
             
             generatePassword()
         }
+        
 
         var charprompt3 = window.prompt("Do you want to include special characters? Type yes or no")
 
         if (charprompt3.toString().toLowerCase() == "yes") {
-            charset += "abcdefghijklmnopqrstuvwxyz"
+            charset += "@%+/'!#$?()[]{}_.-"
         }
         else if (charprompt3.toString().toLowerCase() == "no") {
             charset += ""
@@ -59,13 +60,13 @@ function generatePassword() {
         else {
             alert("Invalid selection. Please enter either yes or no.")
             
-            generatePassword()
+            generatePassword();
         }
 
         var charprompt4 = window.prompt("Do you want to include numbers? Type yes or no")
     
         if (charprompt4.toString().toLowerCase() == "yes") {
-            charset += "abcdefghijklmnopqrstuvwxyz"
+            charset += "1234567890"
         }
         else if (charprompt4.toString().toLowerCase() == "no") {
             charset += ""
@@ -76,22 +77,6 @@ function generatePassword() {
             
             generatePassword()
         }
-    
-
-    
-
-    if (charprompt2.toString().toLowerCase() == "yes") {
-        charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    }
-
-    if (charprompt3.toString().toLowerCase() == "yes") {
-        charset += "@%+/'!#$?()[]{}_.-"
-    }
-
-    if (charprompt4.toString().toLowerCase() == "yes") {
-        charset += "0123456789"
-    }
-
     
     
     
